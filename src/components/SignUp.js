@@ -86,11 +86,6 @@ function SignUpForm(){
         </Form.Group>
         <Form.Group>
       <Form.Label htmlFor="inputPassword6">Password</Form.Label>
-         <Form.Control
-      type="password"
-      id="inputPassword6"
-      aria-describedby="passwordHelpInline"
-    />
     <Form.Control
                 type="password"
                 id="inputPassword6"
