@@ -3,9 +3,9 @@ import React from 'react';
 export const HomePage = () => {
     return (
         <div>
-           Welcome! This is the Home Page!
+          <h5> Welcome. This is the React Bootstrap Demo</h5>
+          <p>By Tiffany Nguyen and Ruhee Shrestha</p>
         </div>
     )
 }
 
-// export default HomePage;

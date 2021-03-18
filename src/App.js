@@ -5,14 +5,11 @@ import signUpPage from './components/SignUp';
 import Login from './components/Login';
 import {HomePage} from './components/HomePage';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
 <BrowserRouter>
-          <Row>
-          <Col md>
         <HeaderComponent />
         <br />
         <Switch>
@@ -20,8 +17,6 @@ function App() {
           <Route path="/signup"component={signUpPage} />
           <Route path="/login" component={Login} />
         </Switch>
-        </Col>
-        </Row>
       </BrowserRouter>      
     </div>
   );

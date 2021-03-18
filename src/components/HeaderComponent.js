@@ -8,9 +8,7 @@ class HeaderComponent extends React.Component {
         return(
            <Fragment>
              <Navbar bg="dark" variant="dark">
-             <LinkContainer to="/">
             <Navbar.Brand href="/">Navbar</Navbar.Brand>
-    </LinkContainer>
     <Nav className="mr-auto">
     <LinkContainer to="/signup">
       <Nav.Link>Sign Up </Nav.Link>

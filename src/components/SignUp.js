@@ -17,7 +17,6 @@ function SignUpForm(){
         return (
     <div>
         <Card style={{ width: '30rem' }} >
-        {/* <Card md={8}> */}
             <Card.Title>
                 Sign Up
             </Card.Title>
