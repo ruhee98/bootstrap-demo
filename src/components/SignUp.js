@@ -1,14 +1,31 @@
 import React, {useState} from 'react';
 import {Col, Card, InputGroup, Form, Button} from 'react-bootstrap';
+import { BootstrapModal } from './BootstrapModal';
+
+const defaultState = {
+  first: '',
+  last: '',
+  username: '',
+  password: ''
+};
+
 
 function SignUpForm(){
     const [validated, setValidated] = useState(false);
-    
+    const [formValues, setFormValues] = useState(defaultState);
+    const [showModal, setShowModal] = useState(false);
+
+    const onChange = (key) => (e) => {
+      setFormValues({
+        ...formValues,
+        [key]: e.target.value
+      });
+    };
+
     const handleSubmit = (event) => {
-            const form = event.currentTarget;
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
+            event.preventDefault();
+            if (event.target.checkValidity()) {
+              setShowModal(true);
             }
         
             setValidated(true);
@@ -29,7 +46,8 @@ function SignUpForm(){
             required
             type="text"
             placeholder="First name"
-            defaultValue="Ruhee"
+            value={formValues.first}
+            onChange={onChange('first')}
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
@@ -41,6 +59,8 @@ function SignUpForm(){
             type="text"
             placeholder="Last name"
             defaultValue="S"
+            value={formValues.last}
+            onChange={onChange('last')}
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
@@ -56,6 +76,8 @@ function SignUpForm(){
               placeholder="Username"
               aria-describedby="inputGroupPrepend"
               required
+              value={formValues.username}
+              onChange={onChange('username')}
             />
             <Form.Control.Feedback type="invalid">
               Please choose a username.
@@ -77,6 +99,12 @@ function SignUpForm(){
     </Form>
     </Card.Body>
     </Card>
+    <BootstrapModal
+        show={showModal}
+        title={'Success'}
+        body={`Welcome to our platform, @${formValues.username}!`}
+        onDismiss={() => setShowModal(false)}
+      />
   </div>
         )
         
