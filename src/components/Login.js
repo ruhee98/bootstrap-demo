@@ -26,7 +26,9 @@ const LoginForm =  () => {
     }
     setValidated(true);
   };
-    return (
+    
+    
+return (
 <div>
 <Card style={{ width: '30rem'}}>
 <Card.Title>
@@ -34,7 +36,7 @@ const LoginForm =  () => {
 </Card.Title>
 <Card.Body>
 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-  <Form.Group controlId="usernmae">
+  <Form.Group controlId="username">
     <Form.Label>Username</Form.Label>
 
                 <InputGroup hasValidation>

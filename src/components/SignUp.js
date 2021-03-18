@@ -38,6 +38,7 @@ function SignUpForm(){
                 Sign Up
             </Card.Title>
             <Card.Body>
+              
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Row>
           <Form.Group as={Col} controlId="validationCustom01">
@@ -65,6 +66,7 @@ function SignUpForm(){
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         </Form.Row>
+
         <Form.Group controlId="validationCustomUsername">
           <Form.Label>Username</Form.Label>
           <InputGroup hasValidation>
