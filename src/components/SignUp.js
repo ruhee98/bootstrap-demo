@@ -91,10 +91,18 @@ function SignUpForm(){
       id="inputPassword6"
       aria-describedby="passwordHelpInline"
     />
+    <Form.Control
+                type="password"
+                id="inputPassword6"
+                aria-describedby="passwordHelpInline"
+                required
+                value={formValues.password}
+                onChange={onChange('password')}
+      />
     <Form.Text id="passwordHelpInline" muted>
       Must be 8-20 characters long.
     </Form.Text>
-  </Form.Group>
+    </Form.Group>
       <Button type="submit">Submit form</Button>
     </Form>
     </Card.Body>
