@@ -5,6 +5,7 @@ import signUpPage from './components/SignUp';
 import Login from './components/Login';
 import {HomePage} from './components/HomePage';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { LayoutPage } from './components/Layout';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <br />
         <Switch>
           <Route path="/" component={HomePage} exact={true}/>
+          <Route path="/layout" component={LayoutPage} />
           <Route path="/signup"component={signUpPage} />
           <Route path="/login" component={Login} />
         </Switch>
